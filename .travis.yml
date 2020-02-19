@@ -5,5 +5,5 @@ install:
  - pip install requests
 
 script:
-  - cd HW4 && python -m unittest TestGithubAPI.py
+  - cd HW04 && python -m unittest TestGithubAPI.py
 # - cd HW2 && python -m unittest TestTriangle
