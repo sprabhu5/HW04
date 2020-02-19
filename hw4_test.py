@@ -1,6 +1,6 @@
 import unittest
 
-from githubapi import GithubApi
+from hw4 import GithubApi
 
 # This code implements the unit test functionality
 # https://docs.python.org/3/library/unittest.html has a nice description of the framework
