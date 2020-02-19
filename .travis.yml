@@ -5,5 +5,4 @@ install:
  - pip install requests
 
 script:
-  - cd HW04 && python -m unittest hw4_test.py 
-# - cd HW2 && python -m unittest TestTriangle
+ - python -m unittest hw4_test
