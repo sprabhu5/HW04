@@ -1,24 +1,22 @@
-"""
-@author:Shivani
-HW04
-"""
 import unittest
-from unittest import mock
+
+import unittest.mock as mock
+
 from hw4 import GithubApi
 
+# This code implements the unit test functionality
+# https://docs.python.org/3/library/unittest.html has a nice description of the framework
 
-@mock.patch('urllib.request.urlopen')
-class TestRepo(unittest.TestCase):
-    """Test for the repositoryList function"""
-
-    def test_commits(self, other):
-        repo = [value for value in repositoryList("Shivani-Prabhu")]
-        result = ["Repo: GitHubApi567, commits: 12", "Repo: hw4, commits: 1", "Repo: StaticCodeAnalysis567, "
-                                                                                   "commits: 2", "Repo: Triangle567, "
-                                                                                                 "commits: 12"]
-        self.assertEqual(repo, result)
-
-
-
-if _name_ == '_main_':
-    unittest.main(exit=False, verbosity=2)
+class TestGithubAPI(unittest.TestCase):
+    def testGithub(self):
+        with mock.patch('githubapi.GithubAPI', create=True) as MockGithub:
+            MockGithub.return_value = False
+            self.assertEqual(MockGithub('?'), False)
+    def testGithub2(self):
+        with mock.patch('githubapi.GithubAPI', create=True) as MockGithub:
+            MockGithub.return_value = True
+            self.assertEqual(MockGithub('jjjpanda'), True)
+       
+if __name__ == '__main__':
+    print('Running unit tests')
+    unittest.main()
