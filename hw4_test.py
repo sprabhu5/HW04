@@ -4,7 +4,7 @@ HW04
 """
 import unittest
 from unittest import mock
-from hw4 import repositoryList
+from hw4 import GithubApi
 
 
 @mock.patch('urllib.request.urlopen')
